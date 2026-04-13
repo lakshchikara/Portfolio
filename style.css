@@ -289,3 +289,150 @@ nav {
 .footer-left p:hover {
   color: #aaa;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+  /* GENERAL */
+  body {
+    overflow-x: hidden;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* NAVBAR */
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .left img {
+    height: 50px;
+  }
+
+  .right ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* HERO */
+  .hero {
+    height: auto;
+    padding: 100px 20px;
+  }
+
+  .hero-title {
+    font-size: 50px;
+    top: 25%;
+    transform: translateY(-50%);
+  }
+
+  .hero img {
+    width: 220px;
+    top: 35%;
+  }
+
+  /* MARQUEE */
+  .marquee {
+    margin-top: 40px;
+  }
+
+  .track span {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  /* GALLERY */
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 per row */
+    gap: 25px;
+    padding: 40px 20px;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+  }
+
+  /* If using portrait/landscape */
+  .portrait,
+  .landscape {
+    width: 100%;
+    height: auto;
+  }
+
+  /* FLOATING GALLERY (if you used it) */
+  .floating-gallery {
+    height: auto;
+    position: static;
+  }
+
+  .img {
+    position: static;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 60px 20px;
+  }
+
+  .footer-top h1 {
+    font-size: 40px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    width: 100%;
+  }
+
+  .footer-left p {
+    font-size: 18px;
+  }
+
+  .footer-right p {
+    font-size: 16px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+  }
+
+}
