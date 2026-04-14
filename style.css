@@ -416,45 +416,75 @@ css/* ================= GRAIN EFFECT ON HERO TITLE ================= */
 
 /* ================= MOBILE RESPONSIVE ================= */
 /* ================= MOBILE FIX ================= */
+/* ================= ULTRA PREMIUM MOBILE ================= */
 @media (max-width: 768px) {
+
+  /* GENERAL RESET */
+  body {
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  section {
+    margin-bottom: 70px;
+  }
 
   /* NAVBAR */
   nav {
     flex-direction: column;
     gap: 10px;
+    padding: 15px 20px;
     text-align: center;
+  }
+
+  .left img {
+    height: 50px;
   }
 
   .right ul {
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
+    font-size: 13px;
+    letter-spacing: 1px;
   }
 
   /* HERO */
   .hero {
     height: auto;
-    padding: 100px 20px;
+    padding: 80px 20px;
   }
 
   .hero-title {
-    font-size: 60px;
-    top: 25%;
+    font-size: 52px;
+    top: 20%;
     transform: translateY(-50%);
+    letter-spacing: 2px;
   }
 
   .hero img {
-    width: 220px;
+    width: 230px;
     top: 35%;
   }
 
   /* MARQUEE */
-  .track span {
-    font-size: 20px;
+  .marquee {
+    margin-top: 40px;
+    padding: 0 20px;
   }
 
-  /* 🔥 GALLERY FIX (MAIN ISSUE) */
-  @media (max-width: 768px) {
+  .track span {
+    font-size: 18px;
+    padding: 10px;
+    letter-spacing: 1px;
+  }
 
+  /* 🔥 GALLERY (SWIPE STYLE PREMIUM) */
   .gallery {
     display: flex !important;
     flex-direction: row;
@@ -464,101 +494,100 @@ css/* ================= GRAIN EFFECT ON HERO TITLE ================= */
     scroll-snap-type: x mandatory;
   }
 
+  .gallery::-webkit-scrollbar {
+    display: none;
+  }
+
   .col-left,
   .col-right {
-    display: contents; /* removes column structure */
+    display: contents;
   }
 
   .card {
-    min-width: 80%;
-    scroll-snap-align: center;
+    min-width: 85%;
     flex-shrink: 0;
+    scroll-snap-align: center;
+    border-radius: 16px;
+    overflow: hidden;
   }
 
-}
-
-  /* FIX ALIGNMENT */
-  .col-left .card,
-  .col-right .card {
-    align-self: center !important;
-    max-width: 100%;
+  .card img {
+    width: 100%;
+    border-radius: 16px;
+    object-fit: cover;
   }
 
-  /* VIDEO FIX */
+  /* TEXT BELOW CARDS */
+  .gallery-text,
+  .gallery-text2 {
+    padding: 0 5px;
+    margin-top: 10px;
+  }
+
+  .gallery-text p,
+  .gallery-text2 p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.75);
+  }
+
+  .gallery-text sup,
+  .gallery-text2 sup {
+    font-size: 10px;
+    margin-right: 6px;
+    color: rgba(255,255,255,0.4);
+  }
+
+  /* DIVIDER */
+  .divider {
+    margin: 40px 20px;
+  }
+
+  /* 🎬 VIDEO SECTION (CLEAN + CINEMATIC) */
+  .video-section {
+    padding: 40px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .video-section video {
     width: 100%;
+    border-radius: 14px;
   }
 
   .video-caption {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
+    position: static;
+    margin-top: 15px;
     font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
   }
 
   /* FOOTER */
+  .footer {
+    padding: 60px 20px;
+  }
+
+  .footer-top h1 {
+    font-size: 40px;
+  }
+
   .footer-content {
     flex-direction: column;
     gap: 30px;
     text-align: center;
   }
 
-}
-/* PREMIUM SPACING */
-@media (max-width: 768px) {
-
-  body {
-    line-height: 1.6;
-  }
-
-  section {
-    margin-bottom: 80px;
-  }
-
-  /* HERO */
-  .hero-title {
-    font-size: 52px;
-    letter-spacing: 2px;
-  }
-
-  .hero img {
-    width: 240px;
-  }
-
-  /* NAV LINKS */
-  .right ul li {
-    font-size: 14px;
-    letter-spacing: 1px;
-  }
-
-  /* TEXT IMPROVEMENT */
-  p {
-    font-size: 15px;
-    opacity: 0.8;
-  }
-
-}
-.gallery::-webkit-scrollbar {
-  display: none;
-}
-.gallery {
-  scroll-behavior: smooth;
-}
-@media (max-width: 768px) {
-
-  .video-section {
-    padding: 40px 20px;
-  }
-
-  .video-section video {
-    width: 100%;
-    border-radius: 15px;
-  }
-
-  .video-caption {
+  .footer-left p {
     font-size: 18px;
-    bottom: 15px;
-    left: 15px;
+  }
+
+  .footer-right p {
+    font-size: 16px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
   }
 
 }
