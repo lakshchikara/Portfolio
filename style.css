@@ -270,6 +270,47 @@ css/* ================= GRAIN EFFECT ON HERO TITLE ================= */
 
 
 
+
+/* DIVIDER LINE */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: #535353;
+  margin: 1px 0;
+}
+
+/* VIDEO SECTION */
+.video-section {
+  position: relative;
+  width: 100%;
+  padding: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* VIDEO */
+.video-section video {
+  width: 50%;
+  border-radius: 0px;
+  object-fit: fill;
+  user-select: none;
+}
+
+/* CAPTION */
+.video-caption {
+  position: absolute;
+  bottom: 565px;
+  left: 44.5%;
+  font-size: 40px;
+  color: white;
+  font-weight: 600;
+  user-select: none;
+}
+
+
+
+
 /*Footer*/
 /* ================= FOOTER ================= */
 
