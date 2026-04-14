@@ -9,10 +9,18 @@ body{
     color: white;
 }
 
+a {
+  text-decoration: none; /* remove underline */
+  color: white;          /* your color */
+}
+html {
+  scroll-behavior: smooth;
+}
+
 .left img {
     height: 80px;
     width: auto;
-    user-select: none
+    user-select: none;
 }
 nav {
     display: flex;
@@ -20,7 +28,7 @@ nav {
     background: linear-gradient(to bottom, #3b3b3b 0.2%, #000000 100%);
     padding: 15px 20px;
     justify-content: space-between;
-    box-shadow: 0 4px 100px rgba(124, 0, 0, 0.6);
+    box-shadow: 0 4px 100px rgba(255, 0, 0, 0.6);
 }
 .right ul {
     display: flex;
@@ -111,6 +119,7 @@ css/* ================= GRAIN EFFECT ON HERO TITLE ================= */
   display: flex;
   width: max-content;
   animation: scroll 60s linear infinite;
+  user-select: none;
 }
 
 /* Text styling */
