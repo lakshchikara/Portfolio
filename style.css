@@ -190,15 +190,19 @@ css/* ================= GRAIN EFFECT ON HERO TITLE ================= */
 /* IMAGE SIZING VIA ASPECT RATIO */
 .portrait img {
   width: 100%;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 2 / 3;
   object-fit: cover;
   display: block;
+}
+
+.landscape {
+  max-width: 520px !important;
 }
 
 .landscape img {
   width: 100%;
   aspect-ratio: 16 / 9;
-  object-fit: cover;
+  object-fit:fit;
   display: block;
 }
 
@@ -246,7 +250,7 @@ css/* ================= GRAIN EFFECT ON HERO TITLE ================= */
 
 .gallery-text p,
 .gallery-text2 p {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 2.2;
   color: rgba(255, 255, 255, 0.7);
   margin: 0;
@@ -254,7 +258,7 @@ css/* ================= GRAIN EFFECT ON HERO TITLE ================= */
 
 .gallery-text sup,
 .gallery-text2 sup {
-  font-size: 9px;
+  font-size: 13px;
   color: rgba(255, 255, 255, 0.35);
   margin-right: 6px;
 }
