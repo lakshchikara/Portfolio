@@ -415,28 +415,14 @@ css/* ================= GRAIN EFFECT ON HERO TITLE ================= */
 
 
 /* ================= MOBILE RESPONSIVE ================= */
+/* ================= MOBILE FIX ================= */
 @media (max-width: 768px) {
-
-  /* GENERAL */
-  body {
-    overflow-x: hidden;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
 
   /* NAVBAR */
   nav {
     flex-direction: column;
     gap: 10px;
-    padding: 15px;
     text-align: center;
-  }
-
-  .left img {
-    height: 50px;
   }
 
   .right ul {
@@ -451,7 +437,7 @@ css/* ================= GRAIN EFFECT ON HERO TITLE ================= */
   }
 
   .hero-title {
-    font-size: 50px;
+    font-size: 60px;
     top: 25%;
     transform: translateY(-50%);
   }
@@ -462,78 +448,117 @@ css/* ================= GRAIN EFFECT ON HERO TITLE ================= */
   }
 
   /* MARQUEE */
-  .marquee {
-    margin-top: 40px;
-  }
-
   .track span {
-    font-size: 18px;
-    padding: 10px;
+    font-size: 20px;
   }
 
-  /* GALLERY */
+  /* 🔥 GALLERY FIX (MAIN ISSUE) */
+  @media (max-width: 768px) {
+
   .gallery {
-    display: grid;
-    grid-template-columns: 1fr; /* 1 per row */
-    gap: 25px;
+    display: flex !important;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 20px;
     padding: 40px 20px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .col-left,
+  .col-right {
+    display: contents; /* removes column structure */
   }
 
   .card {
-    width: 100%;
-    height: auto;
+    min-width: 80%;
+    scroll-snap-align: center;
+    flex-shrink: 0;
   }
 
-  /* If using portrait/landscape */
-  .portrait,
-  .landscape {
-    width: 100%;
-    height: auto;
+}
+
+  /* FIX ALIGNMENT */
+  .col-left .card,
+  .col-right .card {
+    align-self: center !important;
+    max-width: 100%;
   }
 
-  /* FLOATING GALLERY (if you used it) */
-  .floating-gallery {
-    height: auto;
-    position: static;
+  /* VIDEO FIX */
+  .video-section video {
+    width: 100%;
   }
 
-  .img {
-    position: static;
-    width: 100%;
-    margin-bottom: 20px;
+  .video-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 20px;
   }
 
   /* FOOTER */
-  .footer {
-    padding: 60px 20px;
-  }
-
-  .footer-top h1 {
-    font-size: 40px;
-  }
-
   .footer-content {
     flex-direction: column;
     gap: 30px;
     text-align: center;
   }
 
-  .footer-left,
-  .footer-center,
-  .footer-right {
+}
+/* PREMIUM SPACING */
+@media (max-width: 768px) {
+
+  body {
+    line-height: 1.6;
+  }
+
+  section {
+    margin-bottom: 80px;
+  }
+
+  /* HERO */
+  .hero-title {
+    font-size: 52px;
+    letter-spacing: 2px;
+  }
+
+  .hero img {
+    width: 240px;
+  }
+
+  /* NAV LINKS */
+  .right ul li {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  /* TEXT IMPROVEMENT */
+  p {
+    font-size: 15px;
+    opacity: 0.8;
+  }
+
+}
+.gallery::-webkit-scrollbar {
+  display: none;
+}
+.gallery {
+  scroll-behavior: smooth;
+}
+@media (max-width: 768px) {
+
+  .video-section {
+    padding: 40px 20px;
+  }
+
+  .video-section video {
     width: 100%;
+    border-radius: 15px;
   }
 
-  .footer-left p {
+  .video-caption {
     font-size: 18px;
-  }
-
-  .footer-right p {
-    font-size: 16px;
-  }
-
-  .footer-bottom {
-    font-size: 12px;
+    bottom: 15px;
+    left: 15px;
   }
 
 }
